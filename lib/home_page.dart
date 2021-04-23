@@ -10,7 +10,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  bool darkTheme = true;
+  bool darkTheme = false;
   Artboard _artboard;
   RiveAnimationController _animationController;
 
