@@ -11,8 +11,8 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> {
   bool darkTheme = false;
-  Artboard _artboard;
-  RiveAnimationController _animationController;
+  Artboard? _artboard;
+  late RiveAnimationController _animationController;
 
   @override
   void initState() {
@@ -33,8 +33,8 @@ class _HomePageState extends State<HomePage> {
   }
 
   void _onSucess() {
-    _artboard.artboard.removeController(_animationController);
-    _artboard.addController(darkTheme
+    _artboard!.artboard.removeController(_animationController);
+    _artboard!.addController(darkTheme
         ? SimpleAnimation('dark_tick')
         : SimpleAnimation('light_tick'));
   }
@@ -52,7 +52,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: _artboard != null
             ? Rive(
-                artboard: _artboard,
+                artboard: _artboard!,
               )
             : Container(),
       ),
