@@ -36,3 +36,5 @@
                 artboard: _artboard,
               )
             : Container(),
+            
+ Use homePage2 to avoid boiler plate codes. It uses RiveAnimation.asset() which came with new version of rive
